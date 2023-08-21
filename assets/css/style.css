@@ -45,6 +45,27 @@ h1, h2 {
     color: rgb(47, 79, 79);
     border-color: rgb(240, 184, 110);
 }
+#controls {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+#start-btn, #next-btn {
+    background-color: rgb(235, 231, 108); 
+    color: rgb(47, 79, 79);
+    border: rgb(235, 231, 108);
+    border-style: solid;
+    border-width: 10px;
+}
+#start-btn:hover, #next-btn:hover {
+    background-color: rgb(240, 184, 110);
+    color: rgb(47, 79, 79);
+    border-color: rgb(240, 184, 110);
+}
+/* This hide class is used to display the start of the game page by hiding other elements*/
+.hide {
+    display: none;
+}
 .score-footer {
     background-color: white;
     color: rgb(47, 79, 79);

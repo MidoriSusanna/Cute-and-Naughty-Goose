@@ -4,12 +4,10 @@ let optionButtons = document.getElementById('option-buttons')
 let state = {}
 
 function runGame() {
-    state = {}
-    showQuestionNode(1)
-
+    
 }
 
-function showQuestionNode (QuestionNodeIndex) {
+function setNextQuestion () {
 
 }
 
@@ -22,6 +20,10 @@ function addScoreCute() {
 }
 
 function addScoreNaughty() {
+
+}
+
+function selectProfile() {
 
 }
 
