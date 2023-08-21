@@ -37,10 +37,13 @@ h1, h2 {
     background-color: rgb(235, 231, 108); 
     color: rgb(47, 79, 79);
     border: rgb(235, 231, 108);
+    border-style: solid;
+    border-width: 10px;
 }
 .btn:hover {
     background-color: rgb(240, 184, 110);
     color: rgb(47, 79, 79);
+    border-color: rgb(240, 184, 110);
 }
 .score-footer {
     background-color: white;
@@ -66,6 +69,7 @@ h1, h2 {
 #reset:hover {
     background-color: rgb(240, 184, 110);
     color: rgb(47, 79, 79);
+    border-color: rgb(240, 184, 110);
 }
 #cute-goose-img {
     width: 20%;
@@ -77,4 +81,12 @@ h1, h2 {
     width: 18%;
     margin: 15px;
     margin-bottom: 8px;
+}
+#cute-goose {
+    display: flex;
+    align-items: center;
+}
+#naughty-goose {
+    display: flex;
+    align-items: center;
 }
