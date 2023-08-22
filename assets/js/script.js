@@ -1,10 +1,15 @@
-let questionsElement = document.getElementById('Question')
-let optionButtons = document.getElementById('option-buttons')
+// Tag the Start Button and add event listener on the click of the user to start the game
+let startButton = document.getElementById('start-btn')
+startButton.addEventListener('click', runGame)
 
-let state = {}
+let questionContainerElement = document.getElementById('question-answers-container')
 
+// When the game starts, the start button needs to hide adn questions and options displayed
 function runGame() {
-    
+    startButton.classList.add('hide')
+    questionContainerElement.classList.remove('hide')
+    setNextQuestion()
+
 }
 
 function setNextQuestion () {
