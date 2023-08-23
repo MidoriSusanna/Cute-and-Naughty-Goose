@@ -51,7 +51,7 @@ let runGame = () => {
 };
 
 let getNewQuestion = () => {
-    // check that the questionIndex is inside the bounds of the available questions
+    // check that the questionIndex is inside the available questions
     if (questionsIndex < availableQuestions.length) {
     currentQuestion = availableQuestions[questionsIndex]; 
     question.innerText = currentQuestion.question; // sets the text content of the HTML element with the id question
