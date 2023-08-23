@@ -86,7 +86,7 @@ function incrementCute() {
     // Add event listener to the answers with data-number attribute equal to 1
     beCute.addEventListener('click', () => { 
     let oldScore = parseInt(document.getElementById('cute-goose-score').innerText);
-    document.getElementById('cute-goose-score').innerText = oldScore++ 
+    document.getElementById('cute-goose-score').innerText = oldScore + 1
 });
 }
 incrementCute();
@@ -97,7 +97,7 @@ function incrementNaughty() {
     // Add event listener to the answers with data-number attribute equal to 2
     beNaughty.addEventListener('click', () => { 
     let oldScore = parseInt(document.getElementById('naughty-goose-score').innerText);
-    document.getElementById('naughty-goose-score').innerText = oldScore++ 
+    document.getElementById('naughty-goose-score').innerText = oldScore + 1
 });
 }
 incrementNaughty();
