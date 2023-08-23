@@ -59,10 +59,12 @@ let getNewQuestion = () => {
     answerText.forEach(choice => {
         const number = choice.dataset.number;
         choice.innerText = currentQuestion['choice' + number];
+
+        console.log(questionsIndex); // checking available questions
+        console.log(availableQuestions);
     });
 }
 
-    availableQuestions.splice(questionsIndex, 1);
 };
 
 // Add event listener to the next button 
@@ -76,7 +78,7 @@ document.getElementById('next-btn').addEventListener('click', () => {
 });
 // Calling functions
 runGame();
-getNewQuestion();
+/*getNewQuestion();*/
 
 /* Increment the score of cute if answer cute */
 function incrementCute() {
@@ -89,3 +91,14 @@ function incrementCute() {
 });
 }
 incrementCute();
+/* Increment the score of naughty if answer naughty */
+function incrementNaughty() {
+    let beNaughty = document.querySelector('button[data-number="2"]');
+
+    // Add event listener to the answers with data-number attribute equal to 2
+    beNaughty.addEventListener('click', () => { 
+    let oldScore = parseInt(document.getElementById('naughty-goose-score').innerText);
+    document.getElementById('naughty-goose-score').innerText = oldScore++ 
+});
+}
+incrementNaughty();
