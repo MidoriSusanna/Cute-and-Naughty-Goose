@@ -62,20 +62,23 @@ let getNewQuestion = () => {
 
         console.log(questionsIndex); // checking available questions
         console.log(availableQuestions);
+    
+    // Add event listener to the next button 
+    document.getElementById('next-btn').addEventListener('click', nextQuestion)
     });
 }
 
 };
-
-// Add event listener to the next button 
-document.getElementById('next-btn').addEventListener('click', () => {
+// adding a new function to make the nextbutton event listener work
+function nextQuestion() {
     if (questionsIndex < availableQuestions.length - 1) {
         questionsIndex++; 
         getNewQuestion();
     } else {
         window.location.href = 'profile.html'; // If no more questions are found, go to profile page
     }
-});
+};
+
 // Calling functions
 runGame();
 
