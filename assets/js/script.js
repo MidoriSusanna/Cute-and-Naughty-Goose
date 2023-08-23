@@ -91,7 +91,7 @@ function incrementCute() {
 }
 incrementCute();
 /* Increment the score of naughty if answer naughty */
-function incrementNaughty() {
+function incrementNaughty() { 
     let beNaughty = document.querySelector('button[data-number="2"]');
 
     // Add event listener to the answers with data-number attribute equal to 2
@@ -101,3 +101,15 @@ function incrementNaughty() {
 });
 }
 incrementNaughty();
+
+function resetScore() { 
+    // Add event listener to the button reset
+    let resetButton = document.getElementById('reset');
+
+    // reset both counters to zero 
+    reset.addEventListener('click', () => { 
+        document.getElementById('cute-goose-score').innerText = '0';
+        document.getElementById('naughty-goose-score').innerText = '0';
+});
+}
+resetScore();

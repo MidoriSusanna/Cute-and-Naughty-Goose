@@ -180,7 +180,7 @@ p {
     width: 50%;
     height: auto;
 }
-#startagain-btn {
+#startagain-btn, #goHome {
     font-family: 'Itim', cursive;
     font-size: 30px;
     background-color: rgb(235, 231, 108); 
@@ -189,11 +189,11 @@ p {
     border-style: solid;
     border-width: 10px;
 }
-#startagain-btn a {
+#startagain-btn a, #goHome a{
     text-decoration: none;
     color: rgb(47, 79, 79);
 }
-#startagain-btn:hover {
+#startagain-btn:hover, #goHome:hover {
     background-color: rgb(240, 184, 110);
     color: rgb(47, 79, 79); 
     border-color: rgb(240, 184, 110);
