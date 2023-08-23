@@ -1,8 +1,6 @@
 // --- Global Variables --- //
 const question = document.getElementById('questions');
 const answerText = Array.from(document.querySelectorAll(`.btn`));
-const scoreTextCute = document.getElementById('cute-goose-score');
-const scoreTextNaughty = document.getElementById('naughty-goose-score');
 
 let currentQuestion = {};
 let score = 0;
@@ -13,7 +11,7 @@ let questionsIndex = 0;
 let questions = [
     {
         question: "As you awaken in the morning, a profound weariness envelops you. However, duty calls, and you must head to the pond for work. You make your way to the kitchen to prepare your breakfast of corn and salad, only to find that your chameleon roommate has neglected the dishes, leaving you with the task. The chameleon has expertly blended into its surroundings. What do you do?",
-        choice1: "Duck the chameleon. You're going to hunt in the pond. Before leaving, you decide to play a little prank on your elusive chameleon roommate. You sneakily hide its alarm clock (hoping that it's not observing your actions from its clever hiding place).",
+        choice1: "Lazy chameleon! You're going to hunt in the pond. Before leaving, you decide to play a little prank on your elusive chameleon roommate. You sneakily hide its alarm clock (hoping that it's not observing your actions from its clever hiding place).",
         choice2: "I'm certain that the chameleon must have had a valid reason for not washing the dishes—perhaps it's feeling unwell or exhausted. I'll tidy up using my quills, and then I'll go to the pond for my work.",
         cute: 1
     },
@@ -25,7 +23,7 @@ let questions = [
     },
 
     {
-        question: "While on your journey home, an unexpected encounter halts your steps as an armadillo approaches you with a gracious compliment. ‘What beautiful feathers you have, and what an interesting beak’, the armadillo admires. What do you do?",
+        question: "While on your journey home, an unexpected encounter halts your steps as your friend armadillo approaches you with a gracious compliment. ‘What beautiful feathers you have, and what an interesting beak’, the armadillo admires. What do you do?",
         choice1: "‘Well, I do have a lovely beak and these beautiful feathers, indeed’, I reply with a touch of pride. ‘In fact, just yesterday, I paid a visit to the goose beautician to give my beak that extra shine’.",
         choice2: "I express my gratitude to the armadillo for the compliment and offer a warm smile in return. Receiving kindness from others is always a wonderful thing!",
         cute: 1
@@ -76,5 +74,18 @@ document.getElementById('next-btn').addEventListener('click', () => {
         window.location.href = 'profile.html'; // If no more questions are found, go to profile page
     }
 });
-
+// Calling functions
 runGame();
+getNewQuestion();
+
+/* Increment the score of cute if answer cute */
+function incrementCute() {
+    let beCute = document.querySelector('button[data-number="1"]');
+
+    // Add event listener to the answers with data-number attribute equal to 1
+    beCute.addEventListener('click', () => { 
+    let oldScore = parseInt(document.getElementById('cute-goose-score').innerText);
+    document.getElementById('cute-goose-score').innerText = oldScore++ 
+});
+}
+incrementCute();
