@@ -6,6 +6,7 @@ let currentQuestion = {};
 let score = 0;
 let availableQuestions = [];
 let questionsIndex = 0;
+let selectedAnswer = true;
 
 //  Quiz Questions and Choices - Array
 let questions = [
@@ -86,6 +87,7 @@ runGame();
 function incrementCute() {
     let beCute = document.querySelector('button[data-number="1"]');
 
+    
     // Add event listener to the answers with data-number attribute equal to 1
     beCute.addEventListener('click', () => { 
     let oldScore = parseInt(document.getElementById('cute-goose-score').innerText);
