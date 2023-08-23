@@ -78,7 +78,6 @@ document.getElementById('next-btn').addEventListener('click', () => {
 });
 // Calling functions
 runGame();
-/*getNewQuestion();*/
 
 /* Increment the score of cute if answer cute */
 function incrementCute() {
