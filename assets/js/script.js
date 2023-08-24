@@ -52,8 +52,7 @@ let runGame = () => {
 };
 
 let getNewQuestion = () => {
-    // check that the questionIndex is inside the available questions
-    if (questionsIndex < availableQuestions.length) {
+    questionsIndex++;
     currentQuestion = availableQuestions[questionsIndex]; 
     question.innerText = currentQuestion.question; // sets the text content of the HTML element with the id question
 
@@ -68,8 +67,6 @@ let getNewQuestion = () => {
     document.getElementById('next-btn').addEventListener('click', nextQuestion);
     
     });
-}
-
 };
 // adding a new function to make the nextbutton event listener work
 function nextQuestion() {
@@ -80,6 +77,22 @@ function nextQuestion() {
         window.location.href = 'profile.html'; // If no more questions are found, go to profile page
     }
 };
+
+// Add a function that prevents the user from clicking only one choice for each answer
+function noDoubleChoice() {
+    answerText.forEach(choice => {
+        // Add event listener if a choice is clicked 
+        document.getElementById('answer-buttons').addEventListener('click', (nextQuestion) => {
+            let beCute = document.querySelector('button[data-number="2"]');
+            let beNaughty = document.querySelector('button[data-number="1"]');
+            if (beCute === true) {
+                beNaughty = false;
+            } else {
+                beNaughty = true;
+            }
+        });
+    });
+}
 
 // Calling functions
 runGame();
