@@ -52,7 +52,6 @@ let runGame = () => {
 };
 
 let getNewQuestion = () => {
-    questionsIndex++;
     currentQuestion = availableQuestions[questionsIndex]; 
     question.innerText = currentQuestion.question; // sets the text content of the HTML element with the id question
 
@@ -79,7 +78,7 @@ function nextQuestion() {
 };
 
 // Add a function that prevents the user from clicking only one choice for each answer
-function noDoubleChoice() {
+/*function noDoubleChoice() {
     answerText.forEach(choice => {
         // Add event listener if a choice is clicked 
         document.getElementById('answer-buttons').addEventListener('click', (nextQuestion) => {
@@ -92,7 +91,7 @@ function noDoubleChoice() {
             }
         });
     });
-}
+}*/
 
 // Calling functions
 runGame();
