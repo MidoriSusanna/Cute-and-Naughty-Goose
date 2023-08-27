@@ -77,27 +77,27 @@ function nextQuestion() {
     }
 };
 
-// Add a function that prevents the user from clicking more than one choice for each answer
+// Calling functions
+runGame();
+
+/*// Add a function that prevents the user from clicking more than one choice for each answer
 function noDoubleChoice() {
     answerText.forEach(choice => {
         // Add event listener if a choice is clicked 
         document.getElementById('answer-buttons').addEventListener('click', (e) => {
             let beCute = document.querySelector('button[data-number="2"]');
             let beNaughty = document.querySelector('button[data-number="1"]');
-            if (beCute === true) {
+            if (beCute === true || beNaughty === true) {
                 beNaughty.disabled = true;
-                console.log(beCute)
-            } else {
                 beCute.disabled = true;
-                console.log(beNaughty)
+            } else {
+                (beCute.disabled && beNaughty.disabled) = false;
             }
             getNewQuestion();
         });
     });
 }
-
-// Calling functions
-runGame();
+noDoubleChoice(); */
 
 /* Increment the score of cute if answer cute */
 function incrementCute() {
