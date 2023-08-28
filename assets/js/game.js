@@ -1,6 +1,7 @@
 // --- Global Variables --- //
 const question = document.getElementById('questions');
 const answerText = Array.from(document.querySelectorAll(`.btn`));
+const buttons = document.querySelectorAll('.btn');
 
 let currentQuestion = {};
 let score = 0;
@@ -80,24 +81,14 @@ function nextQuestion() {
 // Calling functions
 runGame();
 
-/*// Add a function that prevents the user from clicking more than one choice for each answer
+// Add a function that prevents the user from clicking more than one choice for each answer
 function noDoubleChoice() {
-    answerText.forEach(choice => {
-        // Add event listener if a choice is clicked 
-        document.getElementById('answer-buttons').addEventListener('click', (e) => {
-            let beCute = document.querySelector('button[data-number="2"]');
-            let beNaughty = document.querySelector('button[data-number="1"]');
-            if (beCute === true || beNaughty === true) {
-                beNaughty.disabled = true;
-                beCute.disabled = true;
-            } else {
-                (beCute.disabled && beNaughty.disabled) = false;
-            }
-            getNewQuestion();
-        });
-    });
+    answerText.forEach(button => button.style.pointerEvents = 'none')
+    getNewQuestion();
+    buttons.forEach(button => button.style.pointerEvents = 'unset')
 }
-noDoubleChoice(); */
+noDoubleChoice();
+
 
 /* Increment the score of cute if answer cute */
 function incrementCute() {
