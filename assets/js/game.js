@@ -59,12 +59,11 @@ let getNewQuestion = () => {
     answerText.forEach(choice => {
         const number = choice.dataset.number;
         choice.innerText = currentQuestion['choice' + number];
-
-        console.log(questionsIndex); // checking available questions
-        console.log(availableQuestions);
     
     // Add event listener to the next button 
     document.getElementById('next-btn').addEventListener('click', nextQuestion);
+    // Unable the choice buttons again once the next button is clicked
+    buttons.forEach(button => button.style.pointerEvents = 'unset')
     
     });
 };
@@ -78,17 +77,13 @@ function nextQuestion() {
     }
 };
 
-// Calling functions
+// Calling function runGame
 runGame();
 
 // Add a function that prevents the user from clicking more than one choice for each answer
 function noDoubleChoice() {
     answerText.forEach(button => button.style.pointerEvents = 'none')
-    getNewQuestion();
-    buttons.forEach(button => button.style.pointerEvents = 'unset')
-}
-noDoubleChoice();
-
+};
 
 /* Increment the score of cute if answer cute */
 function incrementCute() {
@@ -99,6 +94,9 @@ function incrementCute() {
     beCute.addEventListener('click', () => { 
     let oldScore = parseInt(document.getElementById('cute-goose-score').innerText);
     document.getElementById('cute-goose-score').innerText = oldScore + 1
+
+    //Call noDouble Choice inside the incrementCute and incrementNaughty functions
+    noDoubleChoice();
 });
 }
 incrementCute();
@@ -110,6 +108,8 @@ function incrementNaughty() {
     beNaughty.addEventListener('click', () => { 
     let oldScore = parseInt(document.getElementById('naughty-goose-score').innerText);
     document.getElementById('naughty-goose-score').innerText = oldScore + 1
+
+    noDoubleChoice();
 });
 }
 incrementNaughty();
