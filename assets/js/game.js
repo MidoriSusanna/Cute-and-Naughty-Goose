@@ -64,6 +64,8 @@ let getNewQuestion = () => {
     document.getElementById('next-btn').addEventListener('click', nextQuestion);
     // Enable the choice buttons again once the next button is clicked
     buttons.forEach(button => button.style.pointerEvents = 'unset')
+    // Remove the class chosenChoice once the next button is clicked
+    buttons.forEach(button => button.classList.remove('chosenChoice'))
     
     });
 };
@@ -92,6 +94,7 @@ function incrementCute() {
     
     // Add event listener to the answers with data-number attribute equal to 2
     beCute.addEventListener('click', () => { 
+    beCute.classList.add('chosenChoice'); // Keep the new colour when clicked
     let oldScore = parseInt(document.getElementById('cute-goose-score').innerText);
     document.getElementById('cute-goose-score').innerText = oldScore + 1
 
@@ -106,6 +109,7 @@ function incrementNaughty() {
 
     // Add event listener to the answers with data-number attribute equal to 1
     beNaughty.addEventListener('click', () => { 
+    beNaughty.classList.add('chosenChoice'); // Keep the new colour when clicked
     let oldScore = parseInt(document.getElementById('naughty-goose-score').innerText);
     document.getElementById('naughty-goose-score').innerText = oldScore + 1
 
