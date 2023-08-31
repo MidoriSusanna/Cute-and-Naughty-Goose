@@ -18,10 +18,20 @@
     <div id="game-quiz-explanation">
         <h2>"Cute and Naughty Goose" is a delightful quiz game perfect for those moments of boredom or when you're unsure about your mood. Dive into questions centered around everyday situations with your adorable animal companions, and uncover your true feelings for the day. Why geese? Because they're simply awesome! Not only are they undeniably cute, but they can also be wonderfully…naughty. <br><br>
 
-            Just click the "START!" button to begin the game!</h2>
+            Name your Goose and Just click the "START!" button to begin the game!</h2>
+        <!-- Name your Goose text input -->
+        <form>
+            <label for="gooseName">Name your Goose: </label>
+            <input type="text" id="gooseName" name="gooseName" required>
+            <input type="submit" value="Submit!" id="submit-btn">
+            <br>
+            <h1 id="displayName"></h1>
+            <br>
+        </form>
     <!-- Start button -->
         <button id="start-btn"><a href= game.html>START!</a></button>
     </div>
     
-
+    <script src="assets/js/index.js"></script>
+</body>
 </html>

@@ -62,7 +62,7 @@ let getNewQuestion = () => {
     
     // Add event listener to the next button 
     document.getElementById('next-btn').addEventListener('click', nextQuestion);
-    // Unable the choice buttons again once the next button is clicked
+    // Enable the choice buttons again once the next button is clicked
     buttons.forEach(button => button.style.pointerEvents = 'unset')
     
     });
