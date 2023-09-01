@@ -129,3 +129,7 @@ function resetScore() {
 });
 }
 resetScore();
+
+// Use local storage to capture the scores
+localStorage.setItem('cute-goose-score', JSON.stringify(cuteScore));
+localStorage.setItem('naughty-goose-score', JSON.stringify(naughtyScore));
