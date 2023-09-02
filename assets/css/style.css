@@ -137,25 +137,6 @@ border-color: rgb(240, 184, 110);
     align-items: center;
     justify-content: center;
 }
-#reset {
-    font-family: 'Itim', cursive;
-    font-size: 30px;
-    background-color: rgb(235, 231, 108); 
-    color: rgb(47, 79, 79);
-    border: rgb(235, 231, 108);
-    border-style: solid;
-    border-width: 10px;
-    margin: 20px;
-}
-#reset:hover {
-    background-color: rgb(240, 184, 110);
-    color: rgb(47, 79, 79);
-    border-color: rgb(240, 184, 110);
-}
-#reset a {
-    text-decoration: none;
-    color: rgb(47, 79, 79);
-}
 #cute-goose-img {
     width: 20%;
     margin: 15px;

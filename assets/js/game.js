@@ -117,19 +117,3 @@ function incrementNaughty() {
 });
 }
 incrementNaughty();
-
-function resetScore() { 
-    // Add event listener to the button reset
-    let resetButton = document.getElementById('reset');
-
-    // reset both counters to zero 
-    reset.addEventListener('click', () => { 
-        document.getElementById('cute-goose-score').innerText = '0';
-        document.getElementById('naughty-goose-score').innerText = '0';
-});
-}
-resetScore();
-
-// Use local storage to capture the scores
-localStorage.setItem('cute-goose-score', JSON.stringify(cuteScore));
-localStorage.setItem('naughty-goose-score', JSON.stringify(naughtyScore));
