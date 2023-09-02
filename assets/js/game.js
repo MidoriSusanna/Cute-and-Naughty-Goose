@@ -69,17 +69,29 @@ let getNewQuestion = () => {
     
     });
 };
-// adding a new function to make the nextbutton event listener work
+//Add function to make the nextbutton event listener work
 function nextQuestion() {
+
+    //An alert displays if the current question is not answered, the user cannot finish with score:0
+    let currentQuestionAnswered = document.querySelector('.btn[data-number="1"].chosenChoice, .btn[data-number="2"].chosenChoice');
+    
+    if (!currentQuestionAnswered) {
+        // The current question is not answered, do not proceed
+        alert("Please select an answer before proceeding.");
+        return;
+    }
+
+    // Get new question if questions are available
     if (questionsIndex < availableQuestions.length - 1) {
         questionsIndex++; 
         getNewQuestion();
     } else {
-        // Store and show the final score 
+        // Store and show the final score in profile.html page 
         const cuteScore = document.getElementById('cute-goose-score').innerText;
         const naughtyScore = document.getElementById('naughty-goose-score').innerText;
         localStorage.setItem('cute-goose-score', JSON.stringify(cuteScore));
         localStorage.setItem('naughty-goose-score', JSON.stringify(naughtyScore));
+
         window.location.href = 'profile.html'; // If no more questions are found, go to profile page
     }
 };
