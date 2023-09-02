@@ -75,6 +75,11 @@ function nextQuestion() {
         questionsIndex++; 
         getNewQuestion();
     } else {
+        // Store and show the final score 
+        const cuteScore = document.getElementById('cute-goose-score').innerText;
+        const naughtyScore = document.getElementById('naughty-goose-score').innerText;
+        localStorage.setItem('cute-goose-score', JSON.stringify(cuteScore));
+        localStorage.setItem('naughty-goose-score', JSON.stringify(naughtyScore));
         window.location.href = 'profile.html'; // If no more questions are found, go to profile page
     }
 };
