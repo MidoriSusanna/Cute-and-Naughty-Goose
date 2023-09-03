@@ -1,6 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Itim&family=Montserrat:wght@200&display=swap');
 
-
+/*General*/
 body {
     background-color: bisque;
     background-image: url('../images/background-index.png');
@@ -15,7 +15,7 @@ h1, h2 {
     font-family: 'Itim', cursive;
     text-align: center;
 }
-/*Intro CSS*/
+/*Intro*/
 #title-container {
     background-color: white;
     padding: 5px 5px 5px 5px;
@@ -72,6 +72,7 @@ label[for="gooseName"] {
     color: rgb(47, 79, 79); 
     border-color: rgb(240, 184, 110);
 }
+/*Game page*/
 .game-container {
     width: 80%;
     background-color: white;
@@ -135,14 +136,13 @@ border-color: rgb(240, 184, 110);
     display: flex;
     flex-direction: row;
     align-items: center;
-    justify-content: center;
+    justify-content: space-evenly;
 }
 #cute-goose-img {
     width: 20%;
     margin: 15px;
     margin-bottom: 8px;
 }
-
 #naughty-goose-img {
     width: 18%;
     margin: 15px;
@@ -151,12 +151,30 @@ border-color: rgb(240, 184, 110);
 #cute-goose {
     display: flex;
     align-items: center;
-    justify-content: center;
+    justify-content: flex-start;
 }
 #naughty-goose {
     display: flex;
     align-items: center;
-    justify-content: center;
+    justify-content: flex-start;
+}
+#startagain-btn, #goHome {
+    font-family: 'Itim', cursive;
+    font-size: 30px;
+    background-color: rgb(235, 231, 108); 
+    color: rgb(47, 79, 79);
+    border: rgb(235, 231, 108);
+    border-style: solid;
+    border-width: 10px;
+}
+#startagain-btn a, #goHome a{
+    text-decoration: none;
+    color: rgb(47, 79, 79);
+}
+#startagain-btn:hover, #goHome:hover {
+    background-color: rgb(240, 184, 110);
+    color: rgb(47, 79, 79); 
+    border-color: rgb(240, 184, 110);
 }
 /* Profile page */
 #score-area-profile {
@@ -193,21 +211,67 @@ p {
     width: 50%;
     height: auto;
 }
-#startagain-btn, #goHome {
-    font-family: 'Itim', cursive;
-    font-size: 30px;
-    background-color: rgb(235, 231, 108); 
-    color: rgb(47, 79, 79);
-    border: rgb(235, 231, 108);
-    border-style: solid;
-    border-width: 10px;
+/*Media Queries*/
+@media (min-width: 320px) and (max-width: 480px) {
+    form {
+        display: flex;
+        flex-direction: column; 
+    }
+    #score-area { 
+        flex-direction: column;
+    }
+    #naughty-goose {
+        display: flex;
+        align-items: center;
+        justify-content: flex-start;
+    }
+    #cute-goose {
+        display: flex;
+        align-items: center;
+        justify-content: flex-start;
+    }
+    #naughty-goose-img {
+        width: 22%;
+    }
+    #score-area-profile {
+        flex-direction: column;
+    }
 }
-#startagain-btn a, #goHome a{
-    text-decoration: none;
-    color: rgb(47, 79, 79);
+@media (min-width: 481px) and (max-width: 767px) {
+    form {
+        display: flex;
+        flex-direction: column; 
+    }
+    #naughty-goose {
+        display: flex;
+        align-items: center;
+        justify-content: flex-start;
+    }
+    #cute-goose {
+        display: flex;
+        align-items: center;
+        justify-content: flex-start;
+    }
+    #naughty-goose-img {
+        width: 22%;
+    }
+    #score-area {
+        display: inline-grid;
+    }
+    #cute-goose {
+        display: flex;
+        align-items: center;
+        justify-content: flex-start;
+        flex-direction: row;
+    }
+    #cute-goose-img {
+        width: 22%;
+        margin: 15px;
+    }
+
 }
-#startagain-btn:hover, #goHome:hover {
-    background-color: rgb(240, 184, 110);
-    color: rgb(47, 79, 79); 
-    border-color: rgb(240, 184, 110);
+@media (min-width: 768px) and (max-width: 1024px){
+    #score-area-profile { 
+        flex-direction: row;
+    }
 }

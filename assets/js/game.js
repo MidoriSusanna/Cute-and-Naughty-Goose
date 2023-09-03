@@ -1,4 +1,4 @@
-// --- Global Variables --- //
+// Global Variables, Start of the game from and adapted https://www.youtube.com/watch?v=f4fB9Xg2JEY
 const question = document.getElementById('questions');
 const answerText = Array.from(document.querySelectorAll(`.btn`));
 const buttons = document.querySelectorAll('.btn');
@@ -48,7 +48,7 @@ let questions = [
 // Run Game and set questions to 0 and score to 0
 let runGame = () => {
     score = 0;
-    availableQuestions = [...questions]; // concise way to clone or copy an array
+    availableQuestions = [...questions]; // concise way to copy an array
     getNewQuestion();
 };
 
@@ -96,7 +96,6 @@ function nextQuestion() {
     }
 };
 
-// Calling function runGame
 runGame();
 
 // Add a function that prevents the user from clicking more than one choice for each answer
@@ -104,7 +103,7 @@ function noDoubleChoice() {
     answerText.forEach(button => button.style.pointerEvents = 'none')
 };
 
-/* Increment the score of cute if answer cute */
+// Increment the score of cute if answer cute
 function incrementCute() {
     let beCute = document.querySelector('button[data-number="2"]');
 
@@ -120,7 +119,7 @@ function incrementCute() {
 });
 }
 incrementCute();
-/* Increment the score of naughty if answer naughty */
+// Increment the score of naughty if answer naughty
 function incrementNaughty() { 
     let beNaughty = document.querySelector('button[data-number="1"]');
 
