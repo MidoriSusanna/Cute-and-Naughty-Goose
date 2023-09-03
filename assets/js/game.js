@@ -44,7 +44,7 @@ let questions = [
     }
         ];
 
-// Run Game and set questions to 0 and score to 0
+// Run Game and set score to 0
 let runGame = () => {
     score = 0;
     availableQuestions = [...questions]; // concise way to copy an array
