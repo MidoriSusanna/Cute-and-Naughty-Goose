@@ -49,7 +49,44 @@ The 'Try Again Tomorrow' button is placed at the end of the page so that users c
 <image src="./assets/images/try-again-tomorrow-img.png"><br>
 
 <h1>Design</h1>
+<p><u>Colours:</u>The chosen color palette is inspired by the soft and natural colors of geese. It encompasses shades of yellow, variations of orange, and employs a contrasting grey for the lettering. Furthermore, the palette incorporates minor colors, including a pink tone. </p><br>
+<p><u>Font:</u>The font choice includes a cursive style('Itim', cursive) to add a playful and gentle touch to the game design. For the main text, a standard font is used('Montserrat', sans-serif) to ensure a user-friendly experience, avoiding confusion and maintaining page visibility.</p><br>
+<p><u>Background:</u> The background was custom-designed specifically for this project using Adobe Illustrator. The main idea was to keep things simple while adding a touch of playfulness. The pattern is designed to be easy on the eyes and doesn't tie it to any specific image. Instead, it creates a relaxed vibe through its repetitive nature. The incorporation of goose icons, sourced from the website https://www.flaticon.com/free-icon/duck_1886902, further enhances the overall playful atmosphere. </p>
+<p><u>Icons:</u>Two custom icons were designed specifically for the score counting, adhering to the selected color scheme. The goal is to provide the result in the most straightforward manner possible, aided by these visual icons.</p><br>
+
 <h1>Testing</h1>
+<p>HTML Tested with (index.html, game.html, profile.html pages):<br>
+https://validator.w3.org/nu/ <br>
+Fixed errors: <br>
+-	Used the button html element with the <a> element, changed with only <a> element <br>
+No more issues found, the code passed the validator with no errors. <br>
+<image src="./assets/images/indexhtml-valid.png"><br>
+There is a warning about an empty h1, but that is used in the index.js page to show the initial greeting after submitting the form. <br>
+<image src="./assets/images/gamehtml-valid.png"><br>
+<image src="./assets/images/profilehtml-valid.png"><br>
+<br>
+<br>
+CSS Tested with: <br>
+https://jigsaw.w3.org/css-validator/#validate_by_input <br>
+The code passed the validator with no errors. <br>
+<image src="./assets/images/css-valid.png"><br>
+<br>
+<br>
+JS Tested with: <br>
+https://jshint.com <br>
+The code passed the validator with no errors. <br>
+<br>
+<br>
+Ligthouse Report: <br>
+The Lighthouse Report is optimal for performance, accessibility, best practices and SEO on index.html, game.html and profile.html. <br>
+The code doesn't present any error on the DevTool of Chrome. No bugs were found.<br>
+<image src="./assets/images/lighthouse-index.png"><br>
+<image src="./assets/images/lighthouse-game.png"><br>
+<image src="./assets/images/lighthouse-profile.png"><br>
+<br>
+<br>
+The website is responsive on different screen sizes, the layout is adapted to different media queries. <br>
+
 <h1>Deployment</h1>
 <p>The site was deployed to GitHub pages. The steps to deploy are as follows: <br>
 - In the GitHub repository, navigate to the Settings tab <br>
