@@ -49,16 +49,16 @@ The 'Try Again Tomorrow' button is placed at the end of the page so that users c
 <image src="./assets/images/try-again-tomorrow-img.png"><br>
 
 <h1>Design</h1>
-<p><u>Colours:</u>The chosen color palette is inspired by the soft and natural colors of geese. It encompasses shades of yellow, variations of orange, and employs a contrasting grey for the lettering. Furthermore, the palette incorporates minor colors, including a pink tone. </p><br>
-<p><u>Font:</u>The font choice includes a cursive style('Itim', cursive) to add a playful and gentle touch to the game design. For the main text, a standard font is used('Montserrat', sans-serif) to ensure a user-friendly experience, avoiding confusion and maintaining page visibility.</p><br>
-<p><u>Background:</u> The background was custom-designed specifically for this project using Adobe Illustrator. The main idea was to keep things simple while adding a touch of playfulness. The pattern is designed to be easy on the eyes and doesn't tie it to any specific image. Instead, it creates a relaxed vibe through its repetitive nature. The incorporation of goose icons, sourced from the website https://www.flaticon.com/free-icon/duck_1886902, further enhances the overall playful atmosphere. </p>
-<p><u>Icons:</u>Two custom icons were designed specifically for the score counting, adhering to the selected color scheme. The goal is to provide the result in the most straightforward manner possible, aided by these visual icons.</p><br>
+<p>Colours: The chosen color palette is inspired by the soft and natural colors of geese. It encompasses shades of yellow, variations of orange, and employs a contrasting grey for the lettering. Furthermore, the palette incorporates minor colors, including a pink tone. </p><br>
+<p>Font: The font choice includes a cursive style('Itim', cursive) to add a playful and gentle touch to the game design. For the main text, a standard font is used('Montserrat', sans-serif) to ensure a user-friendly experience, avoiding confusion and maintaining page visibility.</p><br>
+<p>Background: </u> The background was custom-designed specifically for this project using Adobe Illustrator. The main idea was to keep things simple while adding a touch of playfulness. The pattern is designed to be easy on the eyes and doesn't tie it to any specific image. Instead, it creates a relaxed vibe through its repetitive nature. The incorporation of goose icons, sourced from the website https://www.flaticon.com/free-icon/duck_1886902, further enhances the overall playful atmosphere. </p>
+<p>Icons: Two custom icons were designed specifically for the score counting, adhering to the selected color scheme. The goal is to provide the result in the most straightforward manner possible, aided by these visual icons.</p><br>
 
 <h1>Testing</h1>
-<p>HTML Tested with (index.html, game.html, profile.html pages):<br>
+HTML Tested with (index.html, game.html, profile.html pages):<br>
 https://validator.w3.org/nu/ <br>
 Fixed errors: <br>
--	Used the button html element with the <a> element, changed with only <a> element <br>
+-	Used the button html element with the a element, changed with only a element <br>
 No more issues found, the code passed the validator with no errors. <br>
 <image src="./assets/images/indexhtml-valid.png"><br>
 There is a warning about an empty h1, but that is used in the index.js page to show the initial greeting after submitting the form. <br>
@@ -74,7 +74,18 @@ The code passed the validator with no errors. <br>
 <br>
 JS Tested with: <br>
 https://jshint.com <br>
-The code passed the validator with no errors. <br>
+The code passed the validator with no errors. <br><br>
+I experienced some issues implementing some functions while building the game: <br>
+- At the beginning, on the game.html page I had thought of also providing a reset score button (in addition to the 'Start Again' button) and had added a dedicated function. The reset button, although it worked, complicated the game considerably (e.g. it would have required a 'previous' button in addition to 'next') and I preferred to return it to simpler functionality. <br>
+- If more than one script is assigned to the same page, errors may be produced due to the fact that variables and functions may not be present on the page. In general, I have tried to have one .js page for each .html page, keeping the functions separate.<br>
+- During the implementation of some functions, I used the console.log (which I later removed) to understand the elements the function was using. This proved essential in the section of the game where arrays are used. <br>
+- Given the structure of my code, one of the most complex functions to build was the one called noDoubleChoice. This function prevents the user from having more than one answer (and therefore also prevents the score from increasing by more than 5 in total). The function itself was constructed through pointer events, but the crux to be understood was where to call this function. For the score counter to work as intended, the function must be called within the functions incrementCute and incrementNaughty. <br>
+- In the question array, there was initially an error that caused some questions to be skipped. With the code used I was at the same time shortening the availableQuestions array AND at the same time increasing the questionsIndex. <br>
+- The "Next" button was initially taken into the array and giving a value of undefined. I solved the issue by removing the class of btn from the button. <br>
+- I wanted to add an alert to make the users not able to skip a question. Doing so, I was not able to proceed with the game because in my logic out of ALL question, if one was not answered, then it is not possible to proceed. The difference is: <br>
+incorrect: const unansweredQuestions = document.querySelectorAll('.btn:not(.chosenChoice)'); <br>
+const currentQuestionAnswered = document.querySelector('.btn[data-number="1"].chosenChoice, .btn[data-number="2"].chosenChoice'); <br>
+- The use of localStorage also created some issues due to the fact this element links the game section to the final section. In this case too, the issue with the code was about placement. It needs to be located in the nextQuestion function, when there are no more available questions. <br>
 <br>
 <br>
 Ligthouse Report: <br>
@@ -113,6 +124,8 @@ Text by me and corrected (English mistakes, vocabulary) with DeepL and ChatGPT. 
 Pictures from open source websites: <br>
 https://unsplash.com <br>
 https://www.pexels.com <br>
+Pointer events: https://developer.mozilla.org/en-US/docs/Web/API/Pointer_events <br>
+Mockup/Responsiveness: https://ui.dev/amiresponsive <br>
 Fonts: https://fonts.google.com <br>
 A big thank you to the Student Support of Code Institute who have been extremely helpful. <br>
 </p>
