@@ -62,10 +62,7 @@ label[for="gooseName"] {
     border: rgb(235, 231, 108);
     border-style: solid;
     border-width: 10px;
-}
-#start-btn a {
     text-decoration: none;
-    color: rgb(47, 79, 79);
 }
 #start-btn:hover {
     background-color: rgb(240, 184, 110);
@@ -158,7 +155,24 @@ border-color: rgb(240, 184, 110);
     align-items: center;
     justify-content: flex-start;
 }
-#startagain-btn, #goHome {
+#goHome {
+    font-family: 'Itim', cursive;
+    font-size: 30px;
+    text-align: center;
+    background-color: rgb(235, 231, 108); 
+    color: rgb(47, 79, 79);
+    border: rgb(235, 231, 108);
+    border-style: solid;
+    border-width: 10px;
+    text-decoration: none;
+}
+#goHome:hover {
+    background-color: rgb(240, 184, 110);
+    color: rgb(47, 79, 79); 
+    border-color: rgb(240, 184, 110);
+}
+/* Profile page */
+#startagain-btn{
     font-family: 'Itim', cursive;
     font-size: 30px;
     background-color: rgb(235, 231, 108); 
@@ -167,16 +181,15 @@ border-color: rgb(240, 184, 110);
     border-style: solid;
     border-width: 10px;
 }
-#startagain-btn a, #goHome a{
+#startagain-btn {
     text-decoration: none;
     color: rgb(47, 79, 79);
 }
-#startagain-btn:hover, #goHome:hover {
+#startagain-btn:hover {
     background-color: rgb(240, 184, 110);
     color: rgb(47, 79, 79); 
     border-color: rgb(240, 184, 110);
 }
-/* Profile page */
 #score-area-profile {
     background-color: white;
     display: flex;

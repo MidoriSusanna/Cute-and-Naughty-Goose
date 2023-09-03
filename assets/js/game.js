@@ -7,7 +7,6 @@ let currentQuestion = {};
 let score = 0;
 let availableQuestions = [];
 let questionsIndex = 0;
-let selectedAnswer = true;
 
 //  Quiz Questions and Choices - Array
 let questions = [
@@ -63,9 +62,9 @@ let getNewQuestion = () => {
     // Add event listener to the next button 
     document.getElementById('next-btn').addEventListener('click', nextQuestion);
     // Enable the choice buttons again once the next button is clicked
-    buttons.forEach(button => button.style.pointerEvents = 'unset')
+    buttons.forEach(button => button.style.pointerEvents = 'unset');
     // Remove the class chosenChoice once the next button is clicked
-    buttons.forEach(button => button.classList.remove('chosenChoice'))
+    buttons.forEach(button => button.classList.remove('chosenChoice'));
     
     });
 };
@@ -94,14 +93,14 @@ function nextQuestion() {
 
         window.location.href = 'profile.html'; // If no more questions are found, go to profile page
     }
-};
+}
 
 runGame();
 
 // Add a function that prevents the user from clicking more than one choice for each answer
 function noDoubleChoice() {
-    answerText.forEach(button => button.style.pointerEvents = 'none')
-};
+    answerText.forEach(button => button.style.pointerEvents = 'none');
+}
 
 // Increment the score of cute if answer cute
 function incrementCute() {
@@ -112,7 +111,7 @@ function incrementCute() {
     beCute.addEventListener('click', () => { 
     beCute.classList.add('chosenChoice'); // Keep the new colour when clicked
     let oldScore = parseInt(document.getElementById('cute-goose-score').innerText);
-    document.getElementById('cute-goose-score').innerText = oldScore + 1
+    document.getElementById('cute-goose-score').innerText = oldScore + 1;
 
     //Call noDouble Choice inside the incrementCute and incrementNaughty functions
     noDoubleChoice();
@@ -127,7 +126,7 @@ function incrementNaughty() {
     beNaughty.addEventListener('click', () => { 
     beNaughty.classList.add('chosenChoice'); // Keep the new colour when clicked
     let oldScore = parseInt(document.getElementById('naughty-goose-score').innerText);
-    document.getElementById('naughty-goose-score').innerText = oldScore + 1
+    document.getElementById('naughty-goose-score').innerText = oldScore + 1;
 
     noDoubleChoice();
 });
